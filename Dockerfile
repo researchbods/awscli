@@ -1,9 +1,6 @@
 FROM alpine:3.12
 MAINTAINER Telyn
 
-ARG VERSION
-ENV AWS_CLI_VERSION=$VERSION
-
 RUN apk --update --no-cache add \
     python3 \
     py3-pip \
@@ -15,7 +12,7 @@ RUN apk --update --no-cache add \
     mailcap \
     bash \
     docker-compose \
-    && pip install --no-cache-dir awscli==$AWS_CLI_VERSION \
+    && pip install --no-cache-dir awscli \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/*
 
