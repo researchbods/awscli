@@ -5,8 +5,8 @@ ARG VERSION
 ENV AWS_CLI_VERSION=$VERSION
 
 RUN apk --update --no-cache add \
-    python \
-    py-pip \
+    python3 \
+    py3-pip \
     jq \
     bash \
     git \
