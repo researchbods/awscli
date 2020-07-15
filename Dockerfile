@@ -12,7 +12,7 @@ RUN apk --update --no-cache add \
     mailcap \
     py3-pip \
     python3 \
-    ssh \
+    openssh-client \
     && pip install --no-cache-dir awscli \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/*
